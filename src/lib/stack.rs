@@ -1,5 +1,5 @@
 #[derive(Debug, Clone, PartialEq)]
-struct Stack<T: Sized> {
+pub struct Stack<T: Sized> {
     value: T,
     node: Option<Box<Stack<T>>>,
 }
