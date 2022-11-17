@@ -25,7 +25,7 @@ impl<T: Sized + std::cmp::PartialEq + Clone> Stack<T> {
     //     self.at_inner(st.node, index, current_index + 1)
     // }
 
-    fn at(&self, index: &usize) -> Result<T, String> {
+    pub fn at(&self, index: &usize) -> Result<T, String> {
         self.at_inner(&self, index, 0)
     }
 
@@ -39,12 +39,12 @@ impl<T: Sized + std::cmp::PartialEq + Clone> Stack<T> {
         self.at_inner(st, index, current_index + 1)
     }
 
-    fn next(&self) -> &Stack<T> {
+    pub fn next(&self) -> &Stack<T> {
         let n = self.node.as_ref().unwrap();
         &*n
     }
 
-    fn next_clone(&self) -> Stack<T> {
+    pub fn next_clone(&self) -> Stack<T> {
         let n = self.clone();
         let n = n.node.unwrap();
         *n
