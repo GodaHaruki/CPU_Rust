@@ -61,5 +61,5 @@ mod tests{
                 value: "World",
                 node : None,
             }));
-        assert_eq!(format!("{}, {}" ,stack.at(&0).unwrap(), stack.at(&1).unwrap()), "Hello, World);
+        assert_eq!(format!("{}, {}" ,stack.at(&0).unwrap(), stack.at(&1).unwrap()), "Hello, World");
     }
