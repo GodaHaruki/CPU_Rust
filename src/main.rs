@@ -10,5 +10,5 @@ fn main() {
     };
     println!("{:#?}", stack);
   
-    println!("{}, {}", stack.at(0), stack.at(1));
+    println!("{}, {}", stack.at(0).unwrap(), stack.at(1).unwrap());
 }
