@@ -1,7 +1,7 @@
 #[derive(Debug, Clone, PartialEq)]
 pub struct Stack<T: Sized> {
-    value: T,
-    node: Option<Box<Stack<T>>>,
+    pub value: T,
+    pub node: Option<Box<Stack<T>>>,
 }
 
 impl<T: Sized + std::cmp::PartialEq + Clone> Stack<T> {
