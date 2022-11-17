@@ -3,7 +3,7 @@ use memory::stack::Stack as Stack;
 fn main() {
     let stack = Stack::<&str> {
         value: "Hello",
-        node: Box::new(Some(Stack {
+        node: Some(Box::new(Stack {
             value: "World",
             node: Box::new(None),
         })),
