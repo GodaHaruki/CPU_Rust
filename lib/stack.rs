@@ -53,6 +53,8 @@ impl<T: Sized + std::cmp::PartialEq + Clone> Stack<T> {
 
 #[cfg(test)]
 mod tests{
+    use super::*;
+    
     #[test]
     fn read_stack_value(){    
         let stack = Stack::<&str> {
