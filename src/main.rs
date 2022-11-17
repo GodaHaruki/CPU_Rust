@@ -5,7 +5,7 @@ fn main() {
         value: "Hello",
         node: Some(Box::new(Stack {
             value: "World",
-            node: Box::new(None),
+            node: None,
         })),
     };
     println!("{:#?}", stack);
