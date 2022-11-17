@@ -50,16 +50,3 @@ impl<T: Sized + std::cmp::PartialEq + Clone> Stack<T> {
         *n
     }
 }
-
-fn main() {
-    let g = Stack {
-        value: "Hello",
-        node: Some(Box::new(Stack {
-            value: "World",
-            node: None,
-        })),
-    };
-    println!("{:#?}", g);
-
-    println!("{}, {}", g.at(&0).unwrap(), g.at(&1).unwrap());
-}
