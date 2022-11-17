@@ -50,3 +50,16 @@ impl<T: Sized + std::cmp::PartialEq + Clone> Stack<T> {
         *n
     }
 }
+
+#[cfg(test)]
+mod tests{
+    #[test]
+    fn read_stack_value(){
+        let stack = Stack::<&str>{
+            value : "Hello",
+            node : Some(Box::new(Stack::<&str>{
+                value: "World",
+                node : None,
+            }));
+        assert_eq!(format!("{}, {}" ,stack.at(&0).unwrap(), stack.at(&1).unwrap()), "Hello, World);
+    }
