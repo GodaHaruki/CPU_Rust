@@ -1,4 +1,4 @@
-use memory::stack;
+use memory::stack::Stack as Stack;
 
 fn main() {
     let stack = Stack::<&str> {
