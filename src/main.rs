@@ -3,9 +3,9 @@ use memory::stack::Stack as Stack;
 fn main() {
     let stack = Stack::<&str> {
         value: "Hello",
-        child: Box::new(Some(Stack {
+        node: Box::new(Some(Stack {
             value: "World",
-            child: Box::new(None),
+            node: Box::new(None),
         })),
     };
     println!("{:#?}", stack);
