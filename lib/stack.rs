@@ -64,3 +64,4 @@ mod tests{
         };
         assert_eq!(format!("{}, {}" ,stack.at(&0).unwrap(), stack.at(&1).unwrap()), "Hello, World");
     }
+}
