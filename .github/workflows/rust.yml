@@ -24,4 +24,3 @@ jobs:
       run: cargo run --verbose
     - name: build
       run: cargo build --verbose
-      working‐directory: server
